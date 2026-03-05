@@ -29,6 +29,21 @@ int main()
 	c1.print();
 	c2.print();
 
+	cout << "\n Динамическое создание" << endl;
+	Point* p4 = new Point();
+	Point* p5 = new Point(7.0, 8.0);
+	Circle* c4 = new Circle(0.0, 0.0, 3.0);
+
+	cout << "\n Вызов методов динамических объектов" << endl;
+	p4->print();
+	p5->print();
+	c4->print();
+
+	cout << "\n Удаление динамических объектов" << endl;
+	delete p4;
+	delete p5;
+	delete c4;
+
 	cout << "\n конец main" << endl;
 	return 0;
 }

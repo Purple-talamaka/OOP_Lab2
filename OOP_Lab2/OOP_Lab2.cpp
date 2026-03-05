@@ -81,6 +81,17 @@ int main()
 
 	delete ptr1;
 
+	cout << "\n Указатель на базовый класс" << endl;
+	Point* pp1 = new Point(1.0, 2.0);
+	Point* pp2 = new Circle(3.0, 4.0, 5.0);
+
+	cout << "\n Вызов print" << endl;
+	pp1->print();
+	pp2->print();
+
+	delete pp1;
+	delete pp2;
+
 	cout << "\n конец main" << endl;
 	return 0;
 }

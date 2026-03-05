@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Point.h"
 #include "Circle.h"
+#include "Canvas.h"
 
 using namespace std;
 
@@ -43,6 +44,22 @@ int main()
 	delete p4;
 	delete p5;
 	delete c4;
+
+	cout << "\n Композиция: прямой объект " << endl;
+	Canvas canvas1;
+	Canvas canvas2(1.0, 2.0, 5.0);
+
+	cout << "\n Вызов методов композиции" << endl;
+	canvas1.print();
+	canvas2.print();
+
+	cout << "\n Композиция: указатель" << endl;
+	Canvas2 canvas3;
+	Canvas2 canvas4(1.0, 2.0, 5.0);
+
+	cout << "\n Вызов методов композиции с указателем" << endl;
+	canvas3.print();
+	canvas4.print();
 
 	cout << "\n конец main" << endl;
 	return 0;

@@ -1,10 +1,9 @@
 #pragma once
-
-#include <iostream>
 #include "Point.h"
 
 using namespace std;
 
+//класс круг - наследник класса Point
 class Circle : public Point {
 private:
 	double radius;
@@ -18,5 +17,5 @@ public:
 
 	~Circle() { cout << "Circle: destroyed" << endl; }
 
-	void print();
+	void print(); //переопределение метода print() для класса Circle
 };

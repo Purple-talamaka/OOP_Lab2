@@ -72,7 +72,7 @@ int main()
 
 	cout << "\n Присваивание указателей" << endl;
 	Point* ptr1 = new Point(1.0, 2.0);
-	Point* ptr2 = ptr1;
+	Point* ptr2 = ptr1; // оба указателя указывают на один и тот же объект
 
 	cout << "\n Двигаем obj1" << endl;
 	ptr1->move(5.0, 5.0);
@@ -83,11 +83,11 @@ int main()
 
 	cout << "\n Указатель на базовый класс" << endl;
 	Point* pp1 = new Point(1.0, 2.0);
-	Point* pp2 = new Circle(3.0, 4.0, 5.0);
+	Point* pp2 = new Circle(3.0, 4.0, 5.0); // указатель на Point, но внутри лежит Circle
 
 	cout << "\n Вызов print" << endl;
 	pp1->print();
-	pp2->print();
+	pp2->print(); //вызовется Point::print()
 
 	delete pp1;
 	delete pp2;

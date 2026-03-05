@@ -1,9 +1,10 @@
 #pragma once
 #include "Circle.h"
 
+// Композиция - класс Canvas содержит объект Circle как прямой оюъект
 class Canvas {
 private:
-	Circle circle;
+	Circle circle; // уничтожается автоматически при уничтожении Canvas
 
 public:
 	Canvas() : circle() { cout << "Canvas(): created" << endl; }
@@ -16,9 +17,10 @@ public:
 
 };
 
+//Композиция - класс Canvas2 содержит указатель на объект Circle
 class Canvas2 {
 private:
-	Circle* circle;
+	Circle* circle; // создается динамически, нужно удалять вручную в деструкторе
 
 public:
 	Canvas2() : circle(new Circle()) { cout << "Canvas2(): created" << endl; }

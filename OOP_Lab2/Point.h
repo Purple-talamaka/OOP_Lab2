@@ -4,12 +4,13 @@
 
 using namespace std;
 
+//базовый класс для представления точки на плоскости
 class Point {
 private:
-	double x;
+	double x; //недоступно для наследников
 
 protected:
-	double y;
+	double y; //доступно для наследников
 
 public:
 	Point() : x(0), y(0) { cout << "Point(): created (0,0)" << endl; }

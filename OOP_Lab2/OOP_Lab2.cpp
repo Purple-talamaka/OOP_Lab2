@@ -61,6 +61,26 @@ int main()
 	canvas3.print();
 	canvas4.print();
 
+	cout << "\n Присваивание объектов" << endl;
+	Point obj1(1.0, 2.0);
+	Point obj2 = obj1;
+
+	cout << "\n Двигаем obj1" << endl;
+	obj1.move(5.0, 5.0);
+	obj1.print();
+	obj2.print();
+
+	cout << "\n Присваивание указателей" << endl;
+	Point* ptr1 = new Point(1.0, 2.0);
+	Point* ptr2 = ptr1;
+
+	cout << "\n Двигаем obj1" << endl;
+	ptr1->move(5.0, 5.0);
+	ptr1->print();
+	ptr2->print();
+
+	delete ptr1;
+
 	cout << "\n конец main" << endl;
 	return 0;
 }
